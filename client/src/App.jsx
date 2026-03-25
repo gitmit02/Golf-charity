@@ -77,21 +77,46 @@ function App() {
   }, [])
 
   if (!backendReady) {
-    return (
-      <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center px-6">
-        <div className="text-center">
-          <div className="h-14 w-14 mx-auto animate-spin rounded-full border-4 border-emerald-300/30 border-t-emerald-400" />
-          <h1 className="mt-6 text-2xl font-black tracking-tight">Starting GolfCharity...</h1>
-          <p className="mt-2 text-sm text-slate-300 font-medium">
-            Waiting for backend services to be ready.
-          </p>
-          <p className="mt-3 text-xs text-slate-500 font-semibold">
-            Retry attempt: {retryCount}
-          </p>
+  return (
+    <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center px-6">
+      <div className="text-center max-w-md">
+        
+        {/* Spinner */}
+        <div className="h-14 w-14 mx-auto animate-spin rounded-full border-4 border-emerald-300/30 border-t-emerald-400" />
+
+        {/* Title */}
+        <h1 className="mt-6 text-2xl font-black tracking-tight">
+          Starting GolfCharity...
+        </h1>
+
+        {/* Description */}
+        <p className="mt-2 text-sm text-slate-300 font-medium">
+          We're waking up our backend services. This may take a few seconds.
+        </p>
+
+        {/* Retry count */}
+        <p className="mt-3 text-xs text-slate-500 font-semibold">
+          Retry attempt: {retryCount}
+        </p>
+
+        {/* Status message */}
+        <div className="mt-4 text-xs text-slate-400">
+          <p>⚡ Initial load may take 20-40 seconds</p>
+          <p>🚀 After this, the app will load instantly</p>
         </div>
+
+        {/* Retry Button */}
+        <button
+          onClick={() => window.location.reload()}
+          className="mt-6 px-5 py-2 bg-emerald-500 hover:bg-emerald-600 transition rounded-lg text-sm font-semibold"
+        >
+          Retry Now
+        </button>
+
       </div>
-    )
-  }
+    </div>
+  )
+}
 
   return (
     <Router>
