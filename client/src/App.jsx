@@ -10,6 +10,7 @@ import Charity from './pages/Charity'
 import Results from './pages/Results'
 import AdminDashboard from './pages/AdminDashboard'
 import ForgetPassword from './pages/ForgetPassword'
+import NotFound from './pages/NotFound'
 import { apiRequest, getStoredUser, getToken } from './lib/api'
 
 function getDefaultRouteByRole() {
@@ -107,6 +108,7 @@ function App() {
             <Route path="/charity"   element={<RequireUser><Charity /></RequireUser>} />
             <Route path="/results"   element={<RequireUser><Results /></RequireUser>} />
             <Route path="/admin"     element={<RequireAdmin><AdminDashboard /></RequireAdmin>} />
+            <Route path="*"          element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
