@@ -10,7 +10,7 @@ import Charity from './pages/Charity'
 import Results from './pages/Results'
 import AdminDashboard from './pages/AdminDashboard'
 import ForgetPassword from './pages/ForgetPassword'
-import { getStoredUser, getToken } from './lib/api'
+import { apiRequest, getStoredUser, getToken } from './lib/api'
 
 function getDefaultRouteByRole() {
   const token = getToken()
@@ -55,13 +55,10 @@ function App() {
 
     const checkBackend = async () => {
       try {
-        const res = await fetch('/api/charities', { method: 'GET' })
+        await apiRequest('/api/charities', { method: 'GET' })
         if (!active) return
-
-        if (res.ok) {
-          setBackendReady(true)
-          return
-        }
+        setBackendReady(true)
+        return
       } catch {
         // Keep retrying until backend is reachable.
       }
