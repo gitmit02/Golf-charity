@@ -106,7 +106,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-slate-500 uppercase tracking-tighter">Direct Line</p>
-                  <p className="text-sm font-bold text-slate-200">+44 (0) 20 555-GOLF</p>
+                  <p className="text-sm font-bold text-slate-200">+91 xxxxxxxxxx </p>
                 </div>
               </li>
               <li className="flex items-center gap-4 group cursor-pointer">
@@ -115,7 +115,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-slate-500 uppercase tracking-tighter">Office</p>
-                  <p className="text-sm font-bold text-slate-200">St. Andrews, Scotland</p>
+                  <p className="text-sm font-bold text-slate-200">New Delhi, India</p>
                 </div>
               </li>
             </ul>
@@ -125,7 +125,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="relative pt-8 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-slate-800/80">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
-            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Â© 2026 GolfCharity HQ</span>
+            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">© 2026 Golf Charity </span>
             <div className="flex gap-6">
               <a href="#" className="text-[10px] font-bold text-slate-500 hover:text-emerald-500 uppercase tracking-widest transition-colors">Privacy</a>
               <a href="#" className="text-[10px] font-bold text-slate-500 hover:text-emerald-500 uppercase tracking-widest transition-colors">Terms</a>
