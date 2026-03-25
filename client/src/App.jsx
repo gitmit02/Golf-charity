@@ -51,6 +51,10 @@ function App() {
   const [retryCount, setRetryCount] = useState(0)
 
   useEffect(() => {
+  fetch("https://golf-charity-j4gr.onrender.com/")
+}, [])
+
+  useEffect(() => {
     let active = true
     let timerId
 
